@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@finos/perspective/dist/wasm/perspective-server.wasm" as="fetch" type="application/wasm" crossorigin="anonymous" />
+         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@finos/perspective-viewer/dist/wasm/perspective-viewer.wasm" as="fetch" type="application/wasm" crossorigin="anonymous" />
+         <link rel="stylesheet" crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/@finos/perspective-viewer/dist/css/themes.css" />
+         <script type="module">
+             import "https://cdn.jsdelivr.net/npm/@finos/perspective-viewer@3.6.0/dist/cdn/perspective-viewer.js";
+             import "https://cdn.jsdelivr.net/npm/@finos/perspective-viewer-datagrid@3.6.0/dist/cdn/perspective-viewer-datagrid.js";
+             import "https://cdn.jsdelivr.net/npm/@finos/perspective-viewer-d3fc@3.6.0/dist/cdn/perspective-viewer-d3fc.js";
+ 
+
+             import perspective from "https://cdn.jsdelivr.net/npm/@finos/perspective@3.6.0/dist/cdn/perspective.js";
+ 
+
+             const worker = await perspective.worker();
+             const viewer = document.getElementsByTagName("perspective-viewer")[0];
+ 
+
+             // Fetch data from your Flask server
+             fetch('/data')
+                 .then(response => {
+                     if (!response.ok) {
+                         throw new Error('Network response was not ok');
+                     }
+                     return response.arrayBuffer(); // Assuming your Flask server returns the feather data as an ArrayBuffer
+                 })
+                 .then(arrow => {
+                     const table = worker.table(arrow);
+                     viewer.load(table);
+                     viewer.restore({ settings: true, plugin_config: { edit_mode: "EDIT" } });
+                 })
+                 .catch(error => {
+                     console.error('There was a problem fetching the data:', error);
+                 });
+         </script>
+         <style>
+             perspective-viewer {
+                 position: absolute;
+                 top: 0;
+                 left: 0;
+                 bottom: 0;
+                 right: 0;
+             }
+         </style>
+     </head>
+     <body>
+         <perspective-viewer></perspective-viewer>
+     </body>
+ </html>
