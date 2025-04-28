@@ -1,0 +1,31 @@
+import pandas as pd
+from dash import Dash, html
+from perspective import PerspectiveWidget, Table
+
+# Create Dash app
+app = Dash(__name__)
+
+# Create DataFrame
+df = pd.DataFrame({
+    "Region": ["North", "South", "East", "West", "North", "South"],
+    "Product": ["Apples", "Apples", "Oranges", "Oranges", "Bananas", "Bananas"],
+    "Sales": [100, 150, 200, 130, 90, 120],
+    "Quantity": [30, 45, 50, 35, 20, 40]
+})
+
+# Create Perspective table
+table = Table(df)
+widget = PerspectiveWidget(
+    table=table,
+    group_by=["Region"],
+    columns=["Sales", "Quantity"]
+)
+
+# Layout
+app.layout = html.Div([
+    html.H1("Perspective Pivot Example"),
+    html.Div(widget)
+])
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
