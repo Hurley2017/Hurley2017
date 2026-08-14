@@ -229,7 +229,7 @@ With an **MCA from Jadavpur University** and a **B.Sc (Hons) in Computer Science
 
 | Degree | Institution | Year | Score |
 |--------|-------------|------|-------|
-| **MCA — Computer Engineering** | Jadavpur University | 2022 – 2024 | CGPA 8.52 |
+| **MCA — Computer Engineering** | Jadavpur University | 2022 – 2024 | CGPA 8.8 |
 | **B.Sc (Hons) — Computer Science** | Acharya Prafulla Chandra College | 2019 – 2022 | CGPA 9.4 |
 | **Higher Secondary** | Nebadhai High School | 2016 – 2019 | 80% |
 | **Secondary** | Duttapukur Adarsha Vidyapith | 2010 – 2016 | 75% |
