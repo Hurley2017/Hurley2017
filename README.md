@@ -316,6 +316,10 @@ With an **MCA from Jadavpur University** and a **B.Sc (Hons) in Computer Science
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,10&height=120&section=footer&animation=fadeIn" alt="Animated Footer"/>
 </p>
 
+
+
+
+
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Hurley2017&color=blue&style=flat-square&label=Profile+Views" alt="Profile Views"/>
 </p>
@@ -323,3 +327,27 @@ With an **MCA from Jadavpur University** and a **B.Sc (Hons) in Computer Science
 <p align="center">
   <i>"The only way to do great work is to love what you do." — Steve Jobs</i>
 </p>
+
+
+
+FINANCE INSPIRE: AI INNOVATION PORTFOLIO (HSBC FINANCE OPERATIONS)					
+					
+Developer-Led, Low-Cost, 6-Month Feasibility AI Use Cases for Reconciliations, Analysis, and Stakeholder Operations					
+					
+10 Ideas		< 6 Months		$0 CapEx	100%
+					
+CATALOGUED PROPOSALS		DELIVERY TIMELINE / MVP		OPEN SOURCE / LOCAL MVP	HUMAN-IN-THE-LOOP ALIGNED
+					
+Strategic Alignment & Core Philosophy					
+					
+1. Effortless Efficiency & Capacity Creation	Target high-friction, repetitive manual tasks (e.g. exception triaging, GL coding inquiries, manual variance writing) to save analyst hours during critical month-end close (WD1-WD3).				
+2. Human-in-the-Loop & Risk Governance	AI acts purely as an assistant/copilot producing drafts and triage recommendations; all financial ledger entries and final stakeholder communications remain strictly with human finance professionals.				
+3. Zero-CapEx Developer Delivery	All 10 proposals leverage standard Python ecosystem (pandas, SQLAlchemy, LangChain/LlamaIndex, open LLM/Google Cloud APIs) without requiring new enterprise vendor software licensing.				
+					
+					
+Ideas by Operational Domain					
+Domain / Focus Area	Idea Count	Key Value Metric	Primary Tech Stack		
+Reconciliations & Exceptions	3	60-80% faster exception resolution	Python, pandas, FuzzyWuzzy, Local LLM/RAG		
+Data, Dashboards & FP&A Analysis	3	Eliminates 1-2 days of manual WD1/WD2 reporting	Python, SQLAlchemy, Gemini/Claude API, Streamlit		
+Stakeholder Management & Operations	2	Instant SLA on policy queries & meeting prep	LangChain, ChromaDB / FAISS, Text Embeddings		
+Controls, Governance & Strategic ESG	2	100% audit readiness & automated vendor scoring	BeautifulSoup, OCR (Tesseract), JSON Schema Validation		
